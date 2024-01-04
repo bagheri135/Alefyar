@@ -10,8 +10,12 @@
     <link rel="stylesheet" href="{{url('/management/assets/vendors/iconfonts/flag-icon-css/css/flag-icon.min.css')}}">
     <link rel="stylesheet" href="{{url('/management/assets/vendors/css/vendor.bundle.base.css')}}">
     <link rel="stylesheet" href="{{url('/management/assets/vendors/css/vendor.bundle.addons.css')}}">
+    <link rel="stylesheet" href="{{url('/management/assets/css/chosen.min.css')}}">
+    <link rel="stylesheet" href="{{url('/management/assets/css/style.css')}}">
+    {{-- <link rel="stylesheet" href="{{url('/management/assets/css/style.css')}}"> --}}
     <!-- endinject -->
     <!-- plugin css for this page -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css"/>
     <!-- End plugin css for this page -->
     <!-- inject:css -->
     <link rel="stylesheet" href="{{url('/management/assets/css/shared/style.css')}}">

@@ -22,20 +22,27 @@
         <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <i class="menu-icon typcn typcn-coffee"></i>
-                <span class="menu-title">المان ها</span>
+                <span class="menu-title">صفحات</span>
                 <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/management/pages/ui-features/buttons.html')}}">دکمه ها</a>
+                        <a class="nav-link" href="{{ route('admin.user.index') }}">کاربران</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/management/pages/ui-features/dropdowns.html')}}">لیست ها</a>
+                        <a class="nav-link" href="{{route('admin.category.index')}}">دسته بندی ها</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/management/pages/ui-features/typography.html')}}">تایپوگرافی</a>
+                        <a class="nav-link" href="{{route('admin.category.create')}}">ایجاد دسته جدید</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('admin.article.index')}}">مقالات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('admin.article.create')}}">ایجاد مقاله جدید</a>
+                    </li>
+
                 </ul>
             </div>
         </li>
