@@ -26,13 +26,24 @@
                 <li><a href="#services">خدمات</a></li>
                 <li><a href="#portfolio">نمونه کارها</a></li>
                 <li><a href="#team">تیم ما</a></li>
+                <li><a href="#team"></a></li>
                 <li class="drop-down"><a href="">منوی کاربری</a>
                     <ul>
-                        <li><a href="#">ثبت نام</a></li>
-                        <li><a href="{{route('admin')}}" target="_blank">پنل مدیریت</a></li>
-                        <li><a href="#">ورود</a></li>
-                        <li><a href="#">پروفایل</a></li>
-                        <li><a href="#">خروج</a></li>
+                        @guest
+                            <li><a href="{{ route('register') }}">ثبت نام</a></li>
+                            <li><a href="{{ route('login') }}">ورود</a></li>
+                        @else
+                            @if (auth()->user()->role == 1)
+                                <li><a href="{{ route('admin') }}" target="_blank">پنل مدیریت</a></li>
+                            @endif
+                            <li><a href="{{ route('profile') }}">پروفایل</a></li>
+                            <form action="{{ route('logout') }}" method="post">
+                                @csrf
+                                <li><input class="border-0 bg-transparent px-3 text-danger pointer" type="submit"
+                                        value="خروج"></li>
+                            </form>
+                        @endguest
+
                     </ul>
                 </li>
                 <li><a href="#footer">ارتباط با ما</a></li>

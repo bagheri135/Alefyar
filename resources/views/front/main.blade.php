@@ -1,4 +1,6 @@
 @extends('front.layouts.app')
+@section('front-title','Alefyar')
+@include('front.layouts.intro')
 @section('content')
     @include('front.layouts.about')
     @include('front.layouts.services')
@@ -12,6 +14,7 @@
     @include('front.layouts.pricing')
     @include('front.layouts.faq')
 @endsection
+@include('front.layouts.footer')
 @section('script')
 
 @endsection

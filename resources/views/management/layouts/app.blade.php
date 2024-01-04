@@ -15,6 +15,8 @@
             <div class="main-panel">
                 <div class="content-wrapper">
                     @include('management.layouts.header')
+                    @include('sweetalert::alert')
+                    @include('management.layouts.message')
                     @yield('content')
                 </div>
                 <!-- content-wrapper ends -->
